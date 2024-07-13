@@ -1,0 +1,32 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["network", "cpu", "memory"],
+    "modules-center": ["clock"],
+    "modules-right": ["battery", "pulseaudio", "tray"],
+    "network": {
+        "format-wifi": "{essid} {signalStrength}%",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": "No connection"
+    },
+    "cpu": {
+        "format": "{usage}%"
+    },
+    "memory": {
+        "format": "{used}MiB/{total}MiB"
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S}"
+    },
+    "battery": {
+        "format": "{capacity}% {timeToEmpty}",
+        "format-full": "{capacity}%"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}"
+    },
+    "tray": {
+        "icon-size": 16
+    }
+}
