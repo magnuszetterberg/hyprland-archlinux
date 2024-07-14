@@ -122,8 +122,9 @@
 	    "format": " {status}",
 	    "format-disabled": "", // an empty format will hide the module
 	    "format-connected": " {num_connections}",
-	    "tooltip-format": "{device_alias}",
+        "tooltip-format": "{device_alias}",
 	    "tooltip-format-connected": " {device_enumerate}",
-	    "tooltip-format-enumerate-connected": "{device_alias}"
-    }
+	    "tooltip-format-enumerate-connected": "{device_alias}",
+        "on-click": "bash -c 'if bluetoothctl show | grep -q \"Discoverable: no\"; then bluetoothctl discoverable on && notify-send -u normal -i network-wireless \"BT\" \"Discoverable: ON\"; else bluetoothctl discoverable off && notify-send -u normal -i network-wireless-off \"BT\" \"Discoverable: OFF\"; fi'"
+        }
 }
