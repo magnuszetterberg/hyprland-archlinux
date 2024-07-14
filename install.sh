@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Setup base-packages
-echo "*** updating system ***"
+echo "*** Updating system ***"
 echo ""
 sudo pacman -Suy
 echo ""
@@ -16,7 +16,8 @@ sudo pacman -S hyprland \
     chromium \
     rofi \
     vscodium \
-    nerd-fonts
+    nerd-fonts \
+    python-requests
 
 # echo ""
 # echo ""
@@ -29,6 +30,7 @@ sudo pacman -S hyprland \
 echo ""
 echo "*** cloning git repo ***"
 echo ""
+sleep 3
 git clone https://github.com/magnuszetterberg/hyprland-archlinux.git
 echo ""
 echo "************************"
