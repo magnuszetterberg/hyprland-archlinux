@@ -10,7 +10,6 @@ echo "*******************"
 echo ""
 echo "*** Installing needed packages... ***"
 sudo pacman -S --noconfirm hyprland git waybar alacritty chromium rofi code nerd-fonts python-requests dunst swaylock-effects stow
-
 # echo ""
 # echo ""
 # echo "*** Installing nerdfont ***"
@@ -32,9 +31,8 @@ echo ""
 echo "*** Copying config to .config folder ***"
 sleep 3
 echo ""
-cp -r ./waybar/ ~/.config/
+cp -r ./* ~/.config/
 sleep 3
 echo ""
-cp -r ./hypr/ ~/.config/
-echo ""
+
 echo "*** All done ***"
