@@ -9,12 +9,12 @@ echo "** Updating done **"
 echo "*******************"
 echo ""
 echo "*** Installing needed packages... ***"
-sudo pacman -S --noconfirm hyprland git waybar alacritty chromium rofi code nerd-fonts python-requests dunst swaylock-effects stow
+sudo pacman -S --noconfirm hyprland git waybar alacritty chromium rofi code nerd-fonts python-requests dunst
 # echo ""
 # echo ""
 # echo "*** Installing nerdfont ***"
 # #Install nerd-fonts for icons
-# sudo yay -S nerd-fonts
+sudo yay -S swaylock-effects
 
 
 # clone the config to .
