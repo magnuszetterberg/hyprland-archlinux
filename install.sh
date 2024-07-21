@@ -9,7 +9,7 @@ echo "** Updating done **"
 echo "*******************"
 echo ""
 echo "*** Installing needed packages... ***"
-sudo pacman -S --noconfirm hyprland git waybar alacritty chromium rofi code nerd-fonts python-requests dunst
+sudo pacman -S --noconfirm hyprland git waybar alacritty chromium wofi code nerd-fonts python-requests dunst
 # echo ""
 # echo ""
 # echo "*** Installing nerdfont ***"

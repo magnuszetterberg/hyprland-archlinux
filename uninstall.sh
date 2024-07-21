@@ -3,7 +3,7 @@
 #Setup base-packages
 echo ""
 echo "*** Uninstalling packages... ***"
-sudo pacman -R --noconfirm hyprland waybar alacritty chromium rofi nerd-fonts python-requests dunst swaylock-effects
+sudo pacman -R --noconfirm hyprland waybar alacritty chromium wofi nerd-fonts python-requests dunst swaylock-effects
 echo ""
 echo "*** Removing config folders in .config folder ***"
 sleep 3
