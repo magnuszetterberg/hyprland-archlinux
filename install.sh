@@ -9,12 +9,15 @@ echo "** Updating done **"
 echo "*******************"
 echo ""
 echo "*** Installing needed packages... ***"
-sudo pacman -S --noconfirm hyprland git waybar alacritty chromium wofi code nerd-fonts python-requests dunst
-# echo ""
-# echo ""
-# echo "*** Installing nerdfont ***"
-# #Install nerd-fonts for icons
-sudo yay -S swaylock-effects
+sudo pacman -S --noconfirm hyprland git waybar alacritty chromium rofi code nerd-fonts python-requests dunst
+echo ""
+echo "*** Installing yay  ***"
+git clone https://aur.archlinux.org/yay.git
+cd yay 
+mkpkg -si
+echo ""
+echo "*** Installing yay packages... ***"
+sudo yay -S --noconfirm swaylock-effects wlogout pamixer
 
 
 # clone the config to .
