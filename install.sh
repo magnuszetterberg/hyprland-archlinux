@@ -14,7 +14,7 @@ echo ""
 echo "*** Installing yay  ***"
 git clone https://aur.archlinux.org/yay.git
 cd yay 
-mkpkg -si
+makepkg -si
 echo ""
 echo "*** Installing yay packages... ***"
 sudo yay -S --noconfirm swaylock-effects wlogout pamixer
