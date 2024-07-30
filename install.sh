@@ -17,7 +17,7 @@ cd yay
 makepkg -si
 echo ""
 echo "*** Installing yay packages... ***"
-sudo yay -S --noconfirm swaylock-effects wlogout pamixer
+sudo yay -S swaylock-effects wlogout pamixer
 
 
 # clone the config to .
