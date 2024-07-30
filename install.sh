@@ -9,7 +9,7 @@ echo "** Updating done **"
 echo "*******************"
 echo ""
 echo "*** Installing needed packages... ***"
-sudo pacman -S --noconfirm hyprland git waybar alacritty chromium rofi code nerd-fonts python-requests dunst
+sudo pacman -S --noconfirm hyprland hyprpaper git waybar alacritty chromium rofi code nerd-fonts python-requests dunst
 echo ""
 echo "*** Installing yay  ***"
 git clone https://aur.archlinux.org/yay.git
