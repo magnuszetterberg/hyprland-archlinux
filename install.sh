@@ -9,12 +9,13 @@ echo "** Updating done **"
 echo "*******************"
 echo ""
 echo "*** Installing needed packages... ***"
-sudo pacman -S --noconfirm hyprland hyprpaper git waybar alacritty chromium rofi code nerd-fonts python-requests dunst brightnessctl
+sudo pacman -S hyprland hyprpaper git waybar alacritty chromium wofi code nerd-fonts python-requests dunst brightnessctl
 echo ""
 echo "*** Installing yay  ***"
 git clone https://aur.archlinux.org/yay.git
 cd yay 
 makepkg -si
+echo ""
 echo ""
 echo "*** Installing yay packages... ***"
 sudo yay -S swaylock-effects wlogout pamixer
@@ -31,11 +32,11 @@ echo "************************"
 
 cd hyprland-archlinux
 echo ""
-echo "*** Copying config to .config folder ***"
+echo "*** Creating symlinks from repo to ~/.config folder ***"
 sleep 3
 echo ""
-cp -r ./* ~/.config/
 sleep 3
+find . -type d -exec ln -s $(pwd)/{} ~/.config/{} \;
 echo ""
 
 echo "*** All done ***"

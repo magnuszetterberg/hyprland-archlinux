@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "swaylock",
+    "action" : "swaylock --clock --indicator --screenshots --effect-scale 0.6 --effect-vignette 0.2:0.5 --effect-blur 4x2",
     "text" : "Lock",
     "keybind" : "l"
 }
@@ -30,7 +30,7 @@
 }
 {
     "label" : "reboot",
-    "action" : "$HOME/dotfiles/hypr/scripts/power.sh reboot",
+    "action" : "systemctl reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }
