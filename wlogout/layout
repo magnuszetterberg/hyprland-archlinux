@@ -18,13 +18,13 @@
 }
 {
     "label" : "shutdown",
-    "action" : "hyprctl dispatch shutdown",
+    "action" : "systemctl poweroff",
     "text" : "Shutdown",
     "keybind" : "s"
 }
 {
     "label" : "suspend",
-    "action" : "systemctl suspend",
+    "action" : "~/.config/wlogout/lock_suspend.sh",
     "text" : "Suspend",
     "keybind" : "u"
 }
