@@ -1,16 +1,4 @@
 {
-    "label" : "lock",
-    "action" : "swaylock --clock --indicator --screenshots --effect-scale 0.6 --effect-vignette 0.2:0.5 --effect-blur 4x2",
-    "text" : "Lock",
-    "keybind" : "l"
-}
-{
-    "label" : "hibernate",
-    "action" : "hyprctl dispatch hibernate",
-    "text" : "Hibernate",
-    "keybind" : "h"
-}
-{
     "label" : "logout",
     "action" : "hyprctl dispatch exit",
     "text" : "Exit",
@@ -21,12 +9,6 @@
     "action" : "systemctl poweroff",
     "text" : "Shutdown",
     "keybind" : "s"
-}
-{
-    "label" : "suspend",
-    "action" : "~/.config/wlogout/lock_suspend.sh",
-    "text" : "Suspend",
-    "keybind" : "u"
 }
 {
     "label" : "reboot",
