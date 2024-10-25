@@ -9,7 +9,14 @@ echo "** Updating done **"
 echo "*******************"
 echo ""
 echo "*** Installing pacman packages... ***" 
-sudo pacman -S yay-bin hyprland hyprpaper hyprlock hypridle git waybar alacritty chromium wofi code nerd-fonts python-requests dunst brightnessctl pavucontrol pipewire-alsa pipewire-pulse wireplumber pipewire-audio sof-firmware lib32-pipewire
+sudo pacman -S hyprland hyprpaper hyprlock hypridle git waybar alacritty chromium wofi code nerd-fonts python-requests dunst brightnessctl pavucontrol pipewire-alsa pipewire-pulse wireplumber pipewire-audio sof-firmware lib32-pipewire
+echo ""
+echo "*** Setting up yay ***"
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+echo ""
+echo "yay installed"
 echo ""
 echo "*** Installing yay packages... ***"
 yay -S swaylock-effects wlogout pamixer swaync
