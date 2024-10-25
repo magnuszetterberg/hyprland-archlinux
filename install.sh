@@ -9,7 +9,7 @@ echo "** Updating done **"
 echo "*******************"
 echo ""
 echo "*** Installing pacman packages... ***" 
-sudo pacman -S stow hyprland hyprpaper hyprlock hypridle git waybar alacritty chromium wofi code nerd-fonts python-requests dunst brightnessctl pavucontrol pipewire-alsa pipewire-pulse wireplumber pipewire-audio sof-firmware lib32-pipewire
+sudo pacman -S kitty stow hyprland hyprpaper hyprlock hypridle git waybar alacritty chromium wofi nerd-fonts python-requests dunst brightnessctl pavucontrol pipewire-alsa pipewire-pulse wireplumber pipewire-audio sof-firmware lib32-pipewire
 echo ""
 echo "*** Setting up yay ***"
 git clone https://aur.archlinux.org/yay-bin.git
@@ -19,24 +19,12 @@ echo ""
 echo "yay installed"
 echo ""
 echo "*** Installing yay packages... ***"
-yay -S swaylock-effects wlogout pamixer swaync
+yay -S swaylock-effects wlogout pamixer swaync visual-studio-code-bin
 echo ""
-# clone the config to .
-echo ""
-echo "*** cloning git repo ***"
-echo ""
-sleep 3
-git clone https://github.com/magnuszetterberg/hyprland-archlinux.git
-echo ""
-echo "************************"
-
 cd hyprland-archlinux
 echo ""
-echo "*** Creating symlinks from repo to ~/.config folder ***"
-sleep 3
+echo "*** Creating symlinks from with stow to ~/.config folder ***"
 echo ""
-sleep 3
-find . -type d -exec ln -s $(pwd)/{} ~/.config/{} \;
+stow -t ~/.config .
 echo ""
-
 echo "*** All done ***"
