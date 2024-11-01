@@ -1,3 +1,4 @@
+
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -12,6 +13,7 @@ set $term kitty
 set $menu wofi --show=drun
 set $fileManager nautilus
 set $lock wlogout
+set $browser chromium
     # Start a terminal
     bindsym $mod+q exec $term
     # Kill focused window
@@ -21,6 +23,7 @@ set $lock wlogout
     # Start your nautilus
     bindsym $mod+e exec $fileManager
     bindsym $mod+l exec $lock
+    bindsym $mod+b exec $browser
 
 bindgesture swipe:right workspace prev
 bindgesture swipe:left workspace next
