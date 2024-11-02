@@ -3,11 +3,33 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 # SwayFX settings
 
+# swayfx
+blur enable
+corner_radius 9
+shadows enable
+shadows enable; corner_radius 9
+layer_effects "wofi" shadows enable; corner_radius 9 
+layer_effects "notifications" shadows enable;  corner_radius 9
 gaps inner 10
 default_border pixel 5
 default_floating_border pixel 5
 
 # End of SwayFX settings
+
+# Handle specific windows to float
+# xwayland windows needs special treatment
+# to get wayland app_id, use this
+#   swaymsg -t get_tree 
+
+for_window [class="steam"]
+{
+	floating enable
+	border pixel $border
+}
+
+
+# Autostart
+exec nm-applet
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
