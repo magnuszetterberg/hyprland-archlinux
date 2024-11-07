@@ -8,8 +8,8 @@
 blur enable
 corner_radius 9
 # Shadows
-#shadows enable;
-#shadows_on_csd enable;
+shadows enable;
+shadows_on_csd enable;
 
 #Gaps
 gaps inner 10
@@ -38,6 +38,8 @@ for_window [class="steam"]
 
 
 # Autostart
+# Enables inhibit_idle when playing audio
+exec sway-audio-idle-inhibit
 exec nm-applet
 # obs-fixes for pipewire and wayland
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP

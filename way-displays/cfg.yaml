@@ -17,6 +17,8 @@ ALIGN: MIDDLE
 ORDER:
   - 'Dell Inc. DELL P2422H GX71RP3'
   - 'Philips Consumer Electronics Company PHL 34B1U5600 UK02239009678'
+  - 'Dell Inc. DELL P2421 CW2NL23'
+  - 'Dell Inc. DELL P2421 H3CNL23'
   - 'eDP-1'
   # - 'DP-6'
   # - 'DP-5'

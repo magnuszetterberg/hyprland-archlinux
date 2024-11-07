@@ -21,7 +21,8 @@
         "backlight",
         "pulseaudio",
         "pulseaudio#microphone",
-        "tray"
+        "tray",
+	"custom/audio_idle_inhibitor"
     ],
     "hyprland/window": {
         "format": "{}"
@@ -154,4 +155,16 @@
         "tooltip-format-enumerate-connected": "{device_alias}",
         "on-click": "bash -c 'if bluetoothctl show | grep -q \"Discoverable: no\"; then bluetoothctl discoverable on && notify-send -u normal -i bluetooth \"Bluetooth\" \"Discoverable: ON\" && bluetoothctl pairable on; else bluetoothctl discoverable off && notify-send -u normal -i bluetooth-off \"Bluetooth\" \"Discoverable: OFF\" && bluetoothctl pairable off; fi'"
     }
-}
+},
+    "custom/audio_idle_inhibitor": {
+	"format": "{icon}",
+	"exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
+	"exec-if": "which sway-audio-idle-inhibit",
+	"return-type": "json",
+	"format-icons": {
+		"output": "",
+		"input": "",
+		"output-input": "  ",
+		"none": ""
+		}
+	}
